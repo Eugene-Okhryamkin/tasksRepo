@@ -6,13 +6,16 @@ import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public class Main {
+
     public static void getDate(int year, int month, int day) {
         Calendar calendar = new GregorianCalendar(year, month, day);
 
         calendar.set(year, month, day);
 
         System.out.println(calendar.getTime());
-    };
+    }
+
+    ;
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -27,5 +30,7 @@ public class Main {
         int day = in.nextInt();
 
         getDate(year, month, day);
-    };
+    }
+
+    ;
 }

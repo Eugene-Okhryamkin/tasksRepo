@@ -1,6 +1,6 @@
 package Task1;
 
-public class Sum {
+public class Number {
 
     private int sliceNumber(int number) {
         return number % 1000;
@@ -10,7 +10,7 @@ public class Sum {
         int result = 0;
         int shortNumber = this.sliceNumber(number);
 
-        while(shortNumber > 0) {
+        while (shortNumber > 0) {
             result += shortNumber % 10;
             shortNumber /= 10;
         }
