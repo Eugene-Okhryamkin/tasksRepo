@@ -1,4 +1,4 @@
-package Task1;
+package ru.vsu.okhryamkin.Task1;
 
 public class Number {
 
