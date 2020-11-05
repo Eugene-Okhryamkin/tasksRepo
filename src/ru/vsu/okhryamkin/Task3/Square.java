@@ -1,21 +1,23 @@
 package ru.vsu.okhryamkin.Task3;
 
-public class Line {
-    public double x0;
-    public double y0;
-    public double a;
+public class Square {
+    public double xLeft;
+    public double yDown;
+    public double xRight;
+    public double yUp;
 
-    public Line(double x0, double y0, double a) {
-        this.x0 = x0;
-        this.y0 = y0;
-        this.a = a;
+    public Square(double x0, double x1, double y0, double y1) {
+        this.xLeft = x0;
+        this.yDown = y0;
+        this.xRight = x1;
+        this.yUp = y1;
     }
 
     /**
      * Проверяет, находится ли точка (x, y) выше линии
      */
-    public boolean isPointAboveLine(double x, double y) {
-        return y > a * (x - x0) + y0;
+    public boolean isPointInsideOfSquare(double x, double y) {
+        return (x >= xLeft && x <= xRight && y >= yDown && y<= yUp);
     }
 
 }
