@@ -12,47 +12,61 @@ public class Main {
             result = sum / arr.length;
         };
 
+
         return result;
 
     };
 
-    private static int checkElems(int[] arr, int num) {
+    private static int checkElems(int[] arr, double num) {
         int count = 0;
         for(int i = 0; i < arr.length; i++) {
-            if(arr[i] >= num) {
-                count++;
+            if(!sameElements(arr)) {
+                if(arr[i] >= num) {
+                    count++;
+                }
             } else {
                 return 0;
-            };
+            }
+
         };
 
         return count;
     };
 
+    private static boolean sameElements(int[] arr) {
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == arr[i] - 1) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private static void tests() {
-        int[] normalArray = {3, 8, 5, 0, 1, 2};
+        int[] normalArray = new int[] {3, 8, 5, 0, 1, 2};
         int[] emptyArray = new int[0];
-        int[] zeroArray = {0, 0, 0, 0, 0, 0};
-        int[] minArray = {0, 1, 2, 3, 4, 5};
-        int [] negativeArray = { -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1 };
+        int[] zeroArray = new int[] {0, 0, 0, 0, 0, 0};
+        int[] minArray = new int[] {0, 1, 2, 3, 4, 5};
+        int [] negativeArray = new int[] { -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1 };
         int [] randomArray = new int[] { 1, -1, 2, -2, 3, -3 };
-        int [] longArray = { 222222,-33333333,7777777, 888888888 };
-        int [] testArr =  { -5,-6,-55,-33 };
-        int[] anotherTest = {0, 1, 2};
-        int[] negArray = {-1, -2, -3};
+        int [] longArray = new int[] { 222222,-33333333,7777777, 888888888 };
+        int [] testArr = new int[] { -5,-6,-55,-33 };
+        int[] anotherTest = new int[] {0, 1, 2};
+        int[] negArray = new int[] {-1, -2, -3};
 
         int normalArrSum = arrSum(normalArray);
         int normalArrElems = checkElems(normalArray, normalArrSum);
 
         int emptyArraySum = arrSum(emptyArray);
         int emptyArrElems = checkElems(emptyArray, emptyArraySum);
-
+//
         int zeroArraySum = arrSum(zeroArray);
         int zeroArrElems = checkElems(zeroArray, zeroArraySum);
-
+//
         int minArraySum = arrSum(minArray);
         int minArrElems = checkElems(minArray, minArraySum);
-
+//
         int negativeArraySum = arrSum(negativeArray);
         int negativeArrayElems = checkElems(negativeArray, negativeArraySum);
 
@@ -83,24 +97,23 @@ public class Main {
         System.out.println(testArrElems);
         System.out.println(anotherArrElems);
         System.out.println(negArrayElems);
-
         System.out.println("+------------------+");
     };
 
     public static void main(String[] args) {
 
         tests();
-        int[] array = new int[6];
-        Scanner io = new Scanner(System.in);
+//        int[] array = new int[6];
+//        Scanner io = new Scanner(System.in);
+//
+//        for(int i = 0; i < array.length; i++) {
+//            array[i] = io.nextInt();
+//        };
+//
+//        double arraySum = arrSum(array);
+//        int arrayElems = checkElems(array, arraySum);
 
-        for(int i = 0; i < array.length; i++) {
-            array[i] = io.nextInt();
-        };
 
-        int arraySum = arrSum(array);
-        int arrayElems = checkElems(array, arraySum);
-
-
-        System.out.println(arrayElems);
+        //System.out.println(arrayElems);
     }
 }
