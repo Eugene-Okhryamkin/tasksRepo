@@ -25,7 +25,7 @@ public class MainWindow extends JDialog {
 
         getArray.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                jtableUtils.writeArrayToJTable(arrayTable, matrix.setMatrix("C://Users//Lenovo//IdeaProjects//study//src//ru//vsu//okhryamkin//Task8//ArrayFiles//source//array.txt"));
+                jtableUtils.writeArrayToJTable(arrayTable, matrix.setMatrix("C://Users//Lenovo//IdeaProjects//study//src//ru//vsu//okhryamkin//Task8//ArrayFiles//dist//array.txt"));
             }
         });
 
