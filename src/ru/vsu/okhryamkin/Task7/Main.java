@@ -27,7 +27,6 @@ public class Main {
             } else {
                 return 0;
             }
-
         };
 
         return count;
@@ -105,17 +104,17 @@ public class Main {
     public static void main(String[] args) {
 
         tests();
-//        int[] array = new int[6];
-//        Scanner io = new Scanner(System.in);
-//
-//        for(int i = 0; i < array.length; i++) {
-//            array[i] = io.nextInt();
-//        };
-//
-//        double arraySum = arrSum(array);
-//        int arrayElems = checkElems(array, arraySum);
+        int[] array = new int[6];
+        Scanner io = new Scanner(System.in);
+
+        for(int i = 0; i < array.length; i++) {
+            array[i] = io.nextInt();
+        };
+
+        double arraySum = arrSum(array);
+        int arrayElems = checkElems(array, arraySum);
 
 
-        //System.out.println(arrayElems);
+        System.out.println(arrayElems);
     }
 }
