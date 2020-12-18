@@ -1,7 +1,7 @@
 package ru.vsu.okhryamkin.Task9;
 
-import java.util.List;
-
+//import java.util.List;
+//
 //public class Main {
 //    public static void main(String[] args) {
 //
@@ -11,5 +11,7 @@ import java.util.List;
 //
 //    };
 //
-//    public static int indexOf(List<Integer> list, int value) {};
+//    public static int indexOf(List<Integer> list, int value) {
+//
+//    };
 //}
